@@ -21,7 +21,7 @@ plt.show()
 def predict(X, w, b=0):
     return X * w + b
 
-y_hat = predict(20, 2,1, 0)
+y_hat = predict(20, 2.1, 0)
 print("num pizzas: ", y_hat)
 
 def loss(X, Y, w, b=0):
@@ -61,3 +61,5 @@ def train_b(X,Y, iterations, lr):
             return w, b
     raise Exception("Couldn't converge within %d iterations" % iteration)
 
+# def gradient(X,Y,w):
+#     return 2*np.average(X*(predict(X,w,0)-Y))
